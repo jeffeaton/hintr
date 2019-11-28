@@ -521,7 +521,7 @@ test_that("endpoint_model_options returns model options", {
     "2018")
 
   expect_true(!is.null(json$version))
-  expect_equal(names(json$version), c("hintr", "naomi", "rrq"))
+  expect_equal(names(json$version), c("hintr", "naomi", "rrq", "traduire"))
   expect_true(all(grepl("^(\\d+\\.)?(\\d+\\.)?(\\*|\\d+)$", json$version)))
 })
 
@@ -588,7 +588,7 @@ test_that("endpoint_model_options can be run without programme data", {
     "MWI2016PHIA")
 
   expect_true(!is.null(json$version))
-  expect_equal(names(json$version), c("hintr", "naomi", "rrq"))
+  expect_equal(names(json$version), c("hintr", "naomi", "rrq", "traduire"))
   expect_true(all(grepl("^(\\d+\\.)?(\\d+\\.)?(\\*|\\d+)$", json$version)))
 })
 
