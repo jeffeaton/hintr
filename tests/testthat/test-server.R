@@ -464,7 +464,7 @@ test_that("model run options are exposed", {
     "2018")
 
   expect_true(!is.null(response$version))
-  expect_equal(names(response$version), c("hintr", "naomi", "rrq"))
+  expect_equal(names(response$version), c("hintr", "naomi", "rrq", "traduire"))
   expect_true(all(grepl("^(\\d+\\.)?(\\d+\\.)?(\\*|\\d+)$", response$version)))
 })
 
@@ -475,7 +475,7 @@ test_that("version information is returned", {
   response <- response_from_json(r)
   expect_equal(response$status, "success")
   expect_setequal(names(response$data),
-                  c("hintr", "naomi", "rrq"))
+                  c("hintr", "naomi", "rrq", "traduire"))
 })
 
 test_that("worker information is returned", {
